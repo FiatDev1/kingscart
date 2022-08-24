@@ -204,7 +204,7 @@ a:hover {
   width: 100%;
 }
 
-.nav {
+.main-navbar {
   /* background: #0d1452; */
   /* background: #232f3e; */
   background: linear-gradient(to right, #F9D423, #FF4E50);
@@ -620,6 +620,10 @@ Mobile style's
   padding: 6px 10px;
   transition: all 0.4s ease;
   text-decoration: line-through;
+}
+
+.fa-star{
+  color: #e89300 !important;
 }
 
 .product .text .rating {
@@ -2112,17 +2116,24 @@ div.pagination span.disabled {
   color: #0d1452;
 }
 
-.bs-slider .item {
+
+/* .wrapper {
+  margin: 0 auto !important;
+  width: 100% !important;
+  height: 800px !important;
+} */
+
+.carousel-item {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   height: 500px;
-}
+  }
 
 .home-newsletter {
   padding: 80px 0;
   /* background: #0d1452; */
-  background: #232f3e;
+  background: linear-gradient(-134deg, #FFA62E 0%, #FB962E 20%, #F8852E 40%, #F3742D 60%, #EF612D 80%, #EA4D2C 100%);
 }
 
 .home-newsletter .single {
@@ -2141,7 +2152,7 @@ div.pagination span.disabled {
 }
 .home-newsletter .single .form-control {
   height: 50px;
-  border-color: #333;
+  /* border-color: #333; */
   outline: none;
 }
 .home-newsletter .single .btn {
@@ -2150,4 +2161,11 @@ div.pagination span.disabled {
   color: #fff;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.main-footer{
+  background: linear-gradient(to right, #348AC7, #7474BF);
+  color: rgb(227, 221, 221);
+  padding: 50px 0;
+  display: flex;
 }

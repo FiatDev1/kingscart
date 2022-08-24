@@ -167,13 +167,13 @@ if($success_message != '') {
                             <b>Id:</b> <?php echo $row['customer_id']; ?><br>
                             <b>Name:</b><br> <?php echo $row['customer_name']; ?><br>
                             <b>Email:</b><br> <?php echo $row['customer_email']; ?><br><br>
-                            <a href="#" data-toggle="modal" data-target="#model-<?php echo $i; ?>"class="btn btn-warning btn-xs" style="width:100%;margin-bottom:4px;">Send Message</a>
+                            <a href="#" data-toggle="modal" data-target="#model-<?php echo $i; ?>"class="btn btn-warning btn-xs text-secondary" style="width:100%;margin-bottom:4px;">Send Message</a>
                             <div id="model-<?php echo $i; ?>" class="modal fade" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal">&times;</button>
 											<h4 class="modal-title" style="font-weight: bold;">Send Message</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
 										<div class="modal-body" style="font-size: 14px">
 											<form action="" method="post">
@@ -216,7 +216,7 @@ if($success_message != '') {
                                 echo '<br>(<b>Size:</b> '.$row1['size'];
                                 echo ', <b>Color:</b> '.$row1['color'].')';
                                 echo '<br>(<b>Quantity:</b> '.$row1['quantity'];
-                                echo ', <b>Unit Price:</b> '.$row1['unit_price'].')';
+                                echo ', <b>Unit Price: &#8358;</b> '.$row1['unit_price'].')';
                                 echo '<br><br>';
                            }
                            ?>
@@ -243,7 +243,7 @@ if($success_message != '') {
                         		<b>Transaction Information:</b> <br><?php echo $row['bank_transaction_info']; ?><br>
                         	<?php endif; ?>
                         </td>
-                        <td>$<?php echo $row['paid_amount']; ?></td>
+                        <td>&#8358;<?php echo $row['paid_amount']; ?></td>
                         <td>
                             <?php echo $row['payment_status']; ?>
                             <br><br>
@@ -286,10 +286,10 @@ if($success_message != '') {
 
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content bg-danger">
             <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
             </div>
             <div class="modal-body">
                 Sure you want to delete this item?

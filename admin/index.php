@@ -50,12 +50,6 @@ $statement->execute(array('Completed','Pending'));
 $total_order_complete_shipping_pending = $statement->rowCount();
 ?>
 
-<style>
-	.small-box{
-		border-radius: 18px !important;
-	}
-</style>
-
 <section class="content">
 <div class="row">
             <div class="col-lg-3 col-xs-6">
@@ -63,7 +57,6 @@ $total_order_complete_shipping_pending = $statement->rowCount();
               <div class="small-box bg-primary">
                 <div class="inner">
                   <h3><?php echo $total_product; ?></h3>
-
                   <p>Products</p>
                 </div>
                 <div class="icon">
@@ -123,9 +116,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 				<!-- small box -->
 				<div class="small-box bg-orange">
 				  <div class="inner">
-					<h3><?php echo $total_order_complete_shipping_pending; ?></h3>
+					<h3 class="text-white"><?php echo $total_order_complete_shipping_pending; ?></h3>
   
-					<p>Pending Shippings</p>
+					<p class="text-white">Pending Shippings</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-load-a"></i>
@@ -153,9 +146,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 				<!-- small box -->
 				<div class="small-box bg-yellow">
 				  <div class="inner">
-					<h3><?php echo $total_subscriber; ?></h3>
+					<h3 class="text-white"><?php echo $total_subscriber; ?></h3>
   
-					<p>Subscriber</p>
+					<p class="text-white">Subscriber</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-person-add"></i>

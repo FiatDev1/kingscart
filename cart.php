@@ -60,7 +60,15 @@ if(isset($_POST['form1'])) {
     <?php if($allow_update == 0): ?>
     	<script>alert('<?php echo $error_message; ?>');</script>
 	<?php else: ?>
-		<script>alert('All Items Quantity Update is Successful!');</script>
+		<!-- <script>alert('All Items Quantity Update is Successful!');</script> -->
+        <script>
+            Swal.fire({
+                text: 'Items Quantity Update is Successful!',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 2000
+            });
+        </script>
 	<?php endif; ?>
     <?php
 
@@ -187,7 +195,7 @@ if(isset($_POST['form1'])) {
                                 <?php echo LANG_VALUE_1; ?><?php echo $row_total_price; ?>
                             </td>
                             <td class="text-center">
-                                <a onclick="return confirmDelete();" href="cart-item-delete.php?id=<?php echo $arr_cart_p_id[$i]; ?>&size=<?php echo $arr_cart_size_id[$i]; ?>&color=<?php echo $arr_cart_color_id[$i]; ?>" class="trash"><i class="fa fa-trash" style="color:red;"></i></a>
+                                <a href="#"  data-href="cart-item-delete.php?id=<?php echo $arr_cart_p_id[$i]; ?>&size=<?php echo $arr_cart_size_id[$i]; ?>&color=<?php echo $arr_cart_color_id[$i]; ?>" class="trash" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash" style="color:red;"></i></a>
                             </td>
                         </tr>
                         <?php endfor; ?>
@@ -216,5 +224,22 @@ if(isset($_POST['form1'])) {
 	</div>
 </div>
 
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+			<h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete this item?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php require_once('footer.php'); ?>

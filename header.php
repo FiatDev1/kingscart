@@ -88,7 +88,7 @@ foreach ($result as $row) {
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="assets/css/sweetalert2.css"> -->
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
@@ -102,6 +102,9 @@ foreach ($result as $row) {
 	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+
+
+	<script src="assets/js/sweetalert2.all.min.js"></script>
 
 	<?php
 
@@ -283,6 +286,17 @@ foreach ($result as $row) {
 			<div class="col-md-4 logo">
 				<a href="index.php"><img src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
 			</div>
+
+
+			<div class="col-md-3 search-area">
+				<form class="navbar-form navbar-left form-inline" role="search" action="search-result.php" method="get">
+					<?php $csrf->echoInputField(); ?>
+					<div class="form-group">
+						<input type="search" class="form-control search-top" placeholder="<?php echo LANG_VALUE_2; ?>" name="search_text">
+					</div>
+					<button type="submit" class="btn btn-danger my-2 my-sm-0"><?php echo LANG_VALUE_3; ?></button>
+				</form>
+			</div>
 			
 			<div class="col-md-5 right">
 				<ul>
@@ -326,20 +340,12 @@ foreach ($result as $row) {
 					?>)</a></li>
 				</ul>
 			</div>
-			<div class="col-md-3 search-area">
-				<form class="navbar-form navbar-left form-inline" role="search" action="search-result.php" method="get">
-					<?php $csrf->echoInputField(); ?>
-					<div class="form-group">
-						<input type="text" class="form-control search-top" placeholder="<?php echo LANG_VALUE_2; ?>" name="search_text">
-					</div>
-					<button type="submit" class="btn btn-danger"><?php echo LANG_VALUE_3; ?></button>
-				</form>
-			</div>
+			
 		</div>
 	</div>
 </div>
 
-<div class="nav">
+<div class="nav main-navbar">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 pl_0 pr_0">
@@ -411,6 +417,4 @@ foreach ($result as $row) {
 	</div>
 </div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" ></script>

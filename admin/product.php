@@ -71,8 +71,8 @@
 									<td><?php echo $i; ?></td>
 									<td style="width:82px;"><img src="../assets/uploads/<?php echo $row['p_featured_photo']; ?>" alt="<?php echo $row['p_name']; ?>" style="width:80px;"></td>
 									<td><?php echo $row['p_name']; ?></td>
-									<td>$<?php echo $row['p_old_price']; ?></td>
-									<td>$<?php echo $row['p_current_price']; ?></td>
+									<td>&#8358;<?php echo $row['p_old_price']; ?></td>
+									<td>&#8358;<?php echo $row['p_current_price']; ?></td>
 									<td><?php echo $row['p_qty']; ?></td>
 									<td>
 										<?php if($row['p_is_featured'] == 1) {echo '<span class="badge badge-success" style="background-color:green;">Yes</span>';} else {echo '<span class="badge badge-success" style="background-color:red;">No</span>';} ?>
@@ -100,14 +100,14 @@
 
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content bg-danger">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+			<h4 class="modal-title">Delete Confirmation</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
                 <p>Are you sure want to delete this item?</p>
-                <p style="color:red;">Be careful! This product will be deleted from the order table, payment table, size table, color table and rating table also.</p>
+                <p>Be careful! This product will be deleted from the order table, payment table, size table, color table and rating table also.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

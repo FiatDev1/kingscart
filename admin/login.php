@@ -96,10 +96,12 @@ if(isset($_POST['form1'])) {
 </div>
 
 
-<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<!-- <script src="js/jquery-2.2.3.min.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/dataTables.bootstrap4.min.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
-<script src="js/dataTables.bootstrap.min.js"></script>
+<!-- <script src="js/dataTables.bootstrap.min.js"></script> -->
 <script src="js/select2.full.min.js"></script>
 <script src="js/jquery.inputmask.js"></script>
 <script src="js/jquery.inputmask.date.extensions.js"></script>

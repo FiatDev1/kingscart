@@ -1,6 +1,8 @@
 /* MENU-LEFT
 -------------------------- */
 /* layout */
+
+
 #left ul.nav {
     margin-bottom: 2px;
     font-size: 12px; /* to change font-size, please change instead .lbl */
@@ -30,9 +32,9 @@
     text-decoration: none;
 }
 
-/*#left ul.nav li a:hover .lbl {
+/* #left ul.nav li a:hover .lbl {
     color: #999!important;
-}*/
+} */
 
 #left ul.nav li.current>a .lbl {
     background-color: #999;
@@ -109,6 +111,7 @@
     margin-bottom: 10px;
 }
 #left ul.nav>li.cat-level-1.parent>a {
+    padding: 6px;
     border: solid 1px #e4144d;
     background: #e4144d;
     color: #fff;

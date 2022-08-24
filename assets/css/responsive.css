@@ -23,6 +23,10 @@
 		margin-left: 0;
 		margin-right: 0;
 	}
+
+	.main-footer{
+		display: block;
+	}
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -42,6 +46,7 @@
 	ul.bxslider li, ul.bxslider li .text {height: 250px;}
 	.bx-controls a.bx-prev,
 	.bx-controls a.bx-next {font-size: 30px;}
+.header .search-area .form-group{align-items: center; margin: 0;}
 	ul.bxslider li .text .inner h2 {font-size: 24px;}
 	ul.bxslider li .text .inner h3 {font-size: 16px;}
 	.bx-controls a.bx-prev, .bx-controls a.bx-next {padding-top: 100px!important;}
@@ -55,6 +60,7 @@
 	}
 	.header .search-area {
 		padding-right: 0;
+		align-items: center;
 	}
 	.header .search-area form {
 		padding-right: 0;

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 
 body {
-  font-size: 13px;
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -110,7 +110,7 @@ select.form-control {
 }
 
 h4.modal-title {
-  color: #3c8dbc;
+  /* color: #3c8dbc; */
   font-weight: bold;
 }
 
